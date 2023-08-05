@@ -6,3 +6,15 @@ export interface ButtonProps {
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>
 }
+
+
+export interface FilterProps{
+    title?: string;
+}
+
+
+export interface ManufacturerProps{
+    manufacturer:string;
+    setManufacturer: (manufacturer: string) => void;
+
+}
