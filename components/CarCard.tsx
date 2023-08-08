@@ -2,6 +2,7 @@
 import { CarProps } from '@/types'
 import {useState} from 'react'
 import Image from 'next/image'
+import { calculateCarRent } from '@/utils'
 
 
 interface cardCardProps {
@@ -11,9 +12,27 @@ interface cardCardProps {
 
 
 const CarCard = ( {car}:cardCardProps) => {
+
+  const {city_mpg, year, make, model, transmission, drive } = car;
+
+  const carRent = calculateCarRent(city_mpg, year);
+
+
   return (
-    <div>
-    {car?.year}
+    <div className='car-card group'>
+
+      <div className='car-card__content'>
+
+        <h2 className='car-card__content-title'>{make} {model}</h2>
+
+      </div>
+
+      <p className='flex mt-6 text-[32px] font-extrabold'>
+        <span className='self-start text-[14px] font-semibold'>$</span>
+        {carRent}
+        <span className='self-end text-[14px] font-medium'>/day</span>
+      </p>
+  
     </div>
   )
 }
