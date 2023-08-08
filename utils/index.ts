@@ -1,14 +1,12 @@
-export interface ProcessEnv {
-    [key: string]: string | undefined
-}
+import { CarProps } from "@/types";
 
 export async function fetchCars() {
 
 
     const rapidApiKey = process.env.RAPID_KEY;
 
-    if (!rapidApiKey) {
-        throw new Error('RapidAPI key is missing.');
+    if (!rapidApiKey){
+        throw new Error("Rapid Api Key is missing")
     }
 
 
@@ -40,4 +38,31 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   
     return rentalRatePerDay.toFixed(0);
   };
+
+  export const  generateCarImage = (car: CarProps, angle?:string) => {
+
+
+    const customerKey =process.env.NEXT_PUBLIC_CUSTOMER_KEY;
+
+    if (!customerKey){
+        throw new Error("Customer Key is missing")
+    }
+
+
+    const url = new URL('https://cdn.imagin.studio/getimage');
+
+    const {make, year, model} = car;
+
+    url.searchParams.append('customer', customerKey);
+
+    url.searchParams.append('make', make);
+    url.searchParams.append('modelFamily', model.split(" ")[0]);
+    url.searchParams.append('zoomType', 'fullscreen');
+    url.searchParams.append('modelYear', `${year}`)
+    url.searchParams.append('angle', `${angle}`);
+
+
+    return `${url}`;
+    
+  }
   

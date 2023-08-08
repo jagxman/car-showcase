@@ -2,7 +2,7 @@
 import { CarProps } from "@/types";
 import { useState } from "react";
 import Image from "next/image";
-import { calculateCarRent } from "@/utils";
+import { calculateCarRent, generateCarImage } from "@/utils";
 import { Button, CarDetails } from ".";
 
 interface cardCardProps {
@@ -33,7 +33,7 @@ const CarCard = ({ car }: cardCardProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={generateCarImage(car)}
           alt="car model"
           fill
           priority
