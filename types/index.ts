@@ -12,7 +12,11 @@ export interface ButtonProps {
 
 
 export interface FilterProps{
-    title?: string;
+    manufacturer:string;
+    year: number;
+    fuel: number;
+    limit: number;
+    model: string;
 }
 
 
