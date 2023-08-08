@@ -5,6 +5,9 @@ export interface ButtonProps {
     btnType?:'submit' | 'reset' | 'button' | undefined;
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>
+    textStyles?: string;
+    rightIcon?: string;
+    isDisabled?: boolean;
 }
 
 
