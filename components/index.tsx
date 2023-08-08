@@ -5,4 +5,5 @@ import Footer from "./Footer";
 import Filter from "./Filter";
 import SearchBar from "./Searchbar";
 import SearchManufacturer from "./SearchManufacturer";
-export { Hero, Button, Navbar, Footer, Filter, SearchBar, SearchManufacturer };
+import CarCard from "./CarCard";
+export { Hero, Button, Navbar, Footer, Filter, SearchBar, SearchManufacturer, CarCard };
