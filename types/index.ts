@@ -41,3 +41,13 @@ export interface ManufacturerProps{
     setManufacturer: (manufacturer: string) => void;
 
 }
+
+export interface OptionProps{
+    title: string;
+    value: string;
+}
+
+export interface customFilterProps{
+    title?:string;
+    options: OptionProps[];
+}
