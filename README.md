@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+Explore a curated collection of cutting-edge automobiles on this car showcase website.
 
-```bash
+
+
+
+## Features
+
+- View Car Models from years (2015 to Present Year) 
+- Browse Vehicle Information regarding MPG, Drivetrain, Transmission, etc.
+- See the Car Model in production quality from different angles.
+- Search Vehicles via the Model and Make. 
+- Expand your search by searching for cars on what fuel they take.
+
+## Tech
+
+This car showcase uses many modern technologies listed below.
+
+- Next JS
+- headlessUI
+- TypeScript
+- Tailwind CSS
+- Imagin.studio API
+- Rapid API 
+
+
+## Installation
+
+Install the dependencies and start the server.
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ENV Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run this application, you will need your Rapid API Key and Subscribed to Cars by API-Ninjas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[Ninjas API Subscribe](https://rapidapi.com/apininjas/api/cars-by-api-ninjas)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+[Imagin](https://www.imagin.studio/subscriptions/pricing)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| ENV | VALUE |
+| ------ | ------ |
+| RAPID_KEY | your RAPID API KEY |
+| NEXT_PUBLIC_CUSTOMER_KEY | your customer key from imagin |
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
