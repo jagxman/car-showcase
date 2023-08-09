@@ -26,7 +26,7 @@ const SearchBar = () => {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (manufacturer === "" || model === "") {
+    if (manufacturer === "" && model === "") {
       return alert("Please fill in the search bar.");
     }
 
@@ -52,7 +52,7 @@ const SearchBar = () => {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
   };
 
   return (
