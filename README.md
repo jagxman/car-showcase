@@ -2,6 +2,9 @@
 
 Explore a curated collection of cutting-edge automobiles on this car showcase website.
 
+![image](https://github.com/jagxman/car-showcase/assets/33289432/e6b6cf52-cfd8-4d05-bf43-9302363a011d)
+
+
 
 
 
